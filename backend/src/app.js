@@ -24,6 +24,10 @@ app.use(
 app.use(helmet());
 app.use(morgan("dev"));
 
+app.use('/',(req,res)=>{
+  res.send("Working backned")
+})
+
 app.use("/api/v1/products", productRoutes);
 app.use("/api/v1/materials", materialRoutes);
 app.use("/api/v1/grades",gradeRouter)
