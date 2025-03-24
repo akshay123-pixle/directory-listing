@@ -24,8 +24,8 @@ app.use(
 app.use(helmet());
 app.use(morgan("dev"));
 
-app.use('/',(req,res)=>{
-  res.send("Working backned")
+app.get('/',(req,res)=>{
+  res.json("Working backend")
 })
 
 app.use("/api/v1/products", productRoutes);
